@@ -12,12 +12,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       case AppRoutes.details:
-
-        if (args is String) {
           return MaterialPageRoute(
-              builder: (_) => DetailsScreen(data: args));
-        }
-        return _errorRoute('Invalid arguments for ${AppRoutes.details}');
+              builder: (_) => DetailsScreen(data: args as String,),);
       default:
         return _errorRoute('Route not found');
     }
