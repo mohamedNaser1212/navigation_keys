@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_keys/navigation_keys_service.dart';
 
 class DetailsScreen extends StatelessWidget {
   final String data;
@@ -20,7 +21,7 @@ class DetailsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pop(context);
+                NavigationService.pop(context);
               },
               child: const Text('Go Back!'),
             ),

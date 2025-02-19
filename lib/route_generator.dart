@@ -12,10 +12,13 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       case AppRoutes.details:
-          return MaterialPageRoute(
-              builder: (_) => DetailsScreen(data: args as String,),);
+        return MaterialPageRoute(
+          builder: (_) => DetailsScreen(
+            data: args as String,
+          ),
+        );
       default:
-        return _errorRoute(message:  'Route not found');
+        return _errorRoute(message: 'Route not found');
     }
   }
 
