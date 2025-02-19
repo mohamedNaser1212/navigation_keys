@@ -15,11 +15,13 @@ class RouteGenerator {
           return MaterialPageRoute(
               builder: (_) => DetailsScreen(data: args as String,),);
       default:
-        return _errorRoute('Route not found');
+        return _errorRoute(message:  'Route not found');
     }
   }
 
-  static Route<dynamic> _errorRoute(String message) {
+  static Route<dynamic> _errorRoute({
+    required String message,
+  }) {
     return MaterialPageRoute(builder: (_) {
       return Scaffold(
         appBar: AppBar(title: const Text('Error')),
